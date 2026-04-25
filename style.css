@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+    --bg: #030508;
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.5);
+    --card: #0a0e14;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #ffffff;
+    --muted: #94a3b8;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Global Link Fix */
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+a:visited { color: inherit; }
+
+body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+.container { max-width: 1300px; margin: 0 auto; padding: 0 30px;  }
+.description-area { padding: 10px; margin-top: 25px; }
+
+/* Navigation */
+.glass-nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(3, 5, 8, 0.85); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border); padding: 15px 0;
+}
+
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+
+.logo { display: flex; align-items: center; font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+.logo img { width: 36px; height: 36px; border-radius: 6px; margin-right: 8px; }
+.logo span { color: var(--accent); }
+
+.nav-right { display: flex; align-items: center; gap: 25px; }
+
+.search-bar {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+    padding: 10px 20px; border-radius: 12px; color: #fff; width: 280px;
+}
+
+.social-icons { display: flex; gap: 15px; }
+.social-icons img { width: 22px; opacity: 0.8; }
+.social-icons a:hover img { opacity: 1; filter: drop-shadow(0 0 5px var(--accent)); }
+
+/* Hero Section - Index */
+.hero-slideshow { height: 90vh; position: relative; overflow: hidden; display: flex; align-items: center; }
+.slide {
+    position: absolute; inset: -5%; width: 110%; height: 110%;
+    background-size: cover; background-position: center;
+    filter: blur(30px) brightness(0.3); opacity: 0; transition: opacity 1.5s;
+}
+.slide.active { opacity: 1; }
+
+.hero-overlay { position: relative; z-index: 10; width: 100%; }
+.hero-content { max-width: 700px; margin: 0 auto; text-align: center; }
+
+.badge {
+    background: rgba(59, 130, 246, 0.1); color: var(--accent);
+    padding: 6px 16px; border-radius: 50px; display: inline-block;
+    font-size: 0.8rem; font-weight: 800; margin-bottom: 20px;
+    border: 1px solid var(--accent);
+}
+
+h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+.hero-content p { color: var(--muted); font-size: 1.2rem; margin-bottom: 40px; }
+
+.btn-primary {
+    background: var(--accent); color: white; padding: 18px 45px;
+    border-radius: 14px; font-weight: 700; display: inline-block;
+}
+
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px var(--accent-glow); }
+
+/* Grid Styles */
+.section-header { margin: 60px 0 40px; }
+.section-header h2 { font-size: 2.2rem; }
+.section-header p { color: var(--muted); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
+
+.pack-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 24px; overflow: hidden; display: block;
+}
+.pack-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.pack-img { width: 100%; height: 200px; object-fit: cover; }
+.pack-info { padding: 25px; }
+.pack-info h3 { font-size: 1.4rem; margin-bottom: 5px; }
+
+/* Pack Detail Page */
+.pack-page-hero {
+    height: 65vh; 
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    padding-bottom: 30px;
+    padding-top: 100px;
+
+    overflow: hidden; /* Ensures the blur doesn't bleed outside the container */
+}
+
+.pack-page-hero::before {
+    content: ''; 
+    position: absolute; 
+    inset: 0; 
+    /* This creates the blur and the darkening effect */
+    background: rgba(3, 5, 8, 0.4); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Your existing gradient overlay for the bottom fade */
+    background: linear-gradient(0deg, var(--bg) 5%, transparent 100%), 
+                rgba(3, 5, 8, 0.4); 
+    
+    z-index: 1;
+}
+
+.hero-inner { 
+    position: relative; 
+    z-index: 2; 
+    width: 100%; /* Ensures text alignment remains consistent */
+    text-align: center; /* Centers the content within the 100vh hero */
+}
+.detail-layout { display: grid; grid-template-columns: 1fr 400px; gap: 40px; padding: 40px 0;; } 
+.video-card { background: var(--card); padding: 20px; border-radius: 24px; border: 1px solid var(--border);  } 
+.video-container { aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: #000;}
+.download-card {
+    background: var(--card); padding: 35px; border-radius: 24px;
+    border: 1px solid var(--border); position: sticky; top: 100px;
+}
+
+.pack-cards { background-color: #080a13;   border-radius: 25px; padding: 35px; margin-left: 135px; margin-right: 135px;     border: 1px solid var(--border); position: sticky; top: 100px;
+ }
+.pack-header { margin: 0px 0 40px; }
+.pack-header h1 { font-size: 2.2rem; }
+.pack-header p { color: var(--muted); }
+
+
+.download-btn {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,255,255,0.05); padding: 20px; border-radius: 14px;
+    margin-top: 15px; border: 1px solid var(--border);
+    margin-bottom: 15px;
+}
+.download-btn:hover { border-color: var(--accent); background: rgba(59, 130, 246, 0.1); }
+
+.btn-yt {
+    display: block; text-align: center; background: #ff0000; color: #fff;
+    padding: 15px; border-radius: 12px; font-weight: 700; margin-top: 20px;
+}
+
+/* Footer */
+footer { padding: 80px 0 40px; border-top: 1px solid var(--border); margin-top: 100px; }
+.footer-info p { color: var(--muted); font-size: 0.9rem; }
+.credit a { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 1000px) {
+    .detail-layout { grid-template-columns: 1fr; }
+    h1 { font-size: 2.5rem; }
+    .search-bar { display: none; }
+}
