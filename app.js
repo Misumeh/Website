@@ -1,5 +1,12 @@
 const database = {
     packs: [
+        
+        {
+            id: "ayane-shirakawa-16x",
+            title: "Ayane Shirakawa 16x",
+            videoId: "IKCXAM8XAmk",
+            downloads: { "1.21": "https://www.mediafire.com/file/2mzho4z5g5beclc/!+++§dAyane+§fShirakawa+§5[16x].zip/file" }
+        },
         {
             id: "alya-v3-16x",
             title: "Alya V3 16x",
