@@ -75,7 +75,7 @@ function initPack() {
 
     document.getElementById('downloadLinks').innerHTML = Object.entries(pack.downloads).map(([v, url]) => `
         <a href="${url}" target="_blank" class="download-btn">
-            <span>Version ${v}</span>
+            <span>Download ${v}</span>
             <img src="https://icon-icons.com/download-file?file=https%3A%2F%2Fimages.icon-icons.com%2F1674%2FPNG%2F512%2Fdownload_111133.png&id=111133&pack_or_individual=pack" style="width:20px; filter:invert(1);">
         </a>
     `).join('');
