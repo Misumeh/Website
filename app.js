@@ -1,6 +1,12 @@
 const database = {
     packs: [
-        
+
+        {
+            id: "Maria-Mikhailovna-Kujou",
+            title: "Maria Mikhailovna Kujou 64x & 256x",
+            videoId: "PJi3oH8yytU",
+            downloads: { "1.21": "https://www.mediafire.com/file/gaaem01s1z17qh6/!+++++++§6Masha+v2+§f[64x+and+256x].zip/file"}
+        },
         {
             id: "ayane-shirakawa-16x",
             title: "Ayane Shirakawa 16x",
@@ -39,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initHome() {
     const hero = document.getElementById('heroSlideshow');
     const grid = document.getElementById('packGridInner');
-    
+
     database.packs.forEach((p, i) => {
         const s = document.createElement('div');
         s.className = `slide ${i === 0 ? 'active' : ''}`;
@@ -86,7 +92,7 @@ function initPack() {
 }
 
 function renderGrid(data, container) {
-    if(!container) return;
+    if (!container) return;
     container.innerHTML = data.map(p => `
         <a href="pack.html?id=${p.id}" class="pack-card">
             <img src="${getThumb(p.videoId)}" class="pack-img">
