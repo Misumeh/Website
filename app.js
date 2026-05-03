@@ -3,7 +3,7 @@ const database = {
         {
             id: "Ruka-Sarashina-16x",
             title: "Ruka Sarashina 16x",
-            videoId: "https://www.youtube.com/watch?v=6iVn9IvnSGQ&loop=true",
+            videoId: "6iVn9IvnSGQ/sddefault.jpg,
             downloads: { "1.21": "https://www.mediafire.com/file/wyopnu713o57808/!_§bEsdeath_§3%5B§f32x§3%5D_fix.zip/file"}
         },
                 {
