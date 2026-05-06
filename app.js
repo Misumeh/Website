@@ -1,5 +1,11 @@
 const database = {
     packs: [
+      {
+            id: "Tonka-Yatogami-32x",
+            title: "Tonka Yatogami 32x",
+            videoId: "kaCdksIZj4k",
+            downloads: { "1.21": "https://www.mediafire.com/file/mknu04ibiyf6vm4/!++++++++%C2%A7dTohka+%C2%A75Yatogami+%C2%A7f[16x].zip/file"}
+        },
         {
             id: "Ruka-Sarashina-16x",
             title: "Ruka Sarashina 16x",
