@@ -4,7 +4,7 @@ const database = {
             id: "Yae-Miko-16x",
             title: "Yae Miko 16x",
             videoId: "vtUXhuyULQI",
-            downloads: { "1.21": "https://www.mediafire.com/file/qewqhpl3w2tvbzh/!+++++++++++++Yae+Miko+[16x].zip/file"}
+            downloads: { "Java Edition (1.21)": "https://www.mediafire.com/file/qewqhpl3w2tvbzh/!+++++++++++++Yae+Miko+[16x].zip/file", "Bedrock Edition (Latest)": "https://www.mediafire.com/file/nwo8ftvevr05091/%21_Yae_Miko_%2816x%29.mcpack/file"}
         },
 {
             id: "Rossweisse-16x",
